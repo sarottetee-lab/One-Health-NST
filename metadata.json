@@ -1,0 +1,8 @@
+{
+  "name": "3-One Health Rabies Dashboard — Nakhon Si Thammarat",
+  "description": "ระบบสารสนเทศและแดชบอร์ดเฝ้าระวังโรคพิษสุนัขบ้าเชิงบูรณาการ One Health (คน-สัตว์-สิ่งแวดล้อม) นครศรีธรรมราช พร้อมวิเคราะห์ความเสี่ยง GIS, PEP, KAP, ประชากรสัตว์ และการจำแนกพื้นที่ระบาด",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Prompt', 'Sarabun', sans-serif;
+  }
+}
+
+/* High-Precision GIS Map & Boundary Layer Styling */
+.gis-district-polygon {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  transition: stroke 0.25s ease, stroke-width 0.2s ease, fill-opacity 0.25s ease;
+}
+
+.gis-district-polygon:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.75));
+}
+
+.gis-polygon-highlighted {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
+}
+
+.gis-outbreak-buffer-3k {
+  stroke-dasharray: 6, 6;
+  animation: pulse-buffer-stroke 3s linear infinite;
+}
+
+@keyframes pulse-buffer-stroke {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 24;
+  }
+}
+
+.choropleth-poly-label {
+  pointer-events: none !important;
+  user-select: none;
+}
+
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+}
+
